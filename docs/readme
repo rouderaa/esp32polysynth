@@ -1,6 +1,6 @@
 This Arduino based project turns your ESP32-A1S-AudioKit into a midi synthesizer.
 It supports playing 16 notes at once and has a sound reminiscent of the old Moog synthesizers. 
-The synthesizer can generate sinus, triangle and square waves. To set the style of wave use the program change MIDI message (number 0=sinus, number 1=triangle and number 2=square).
+The synthesizer can generate sinus, triangle and square waves. To set the style of wave use the program change MIDI message (number 0=sinus, number 18=triangle and number 36=square).
 To create the midi in port see the schematic in the esp32midi.jpg file. The fast optocoupler chip 6n138 has been used. 
 The audio-kit offers a headphone output that I used to develop this software. If you want to use the loudspeaker outputs of the board then look for the PolySynth.setVolume operation to set its volume.
 Currently the synthesizer does not support an envelope for a note so the note is either on or off. A useful extension would be to implement an attack, decay, sustain and release phase for a note. This should be possible since currently the core that makes the sound uses 75% of its CPU for the handling of 16 channels. So there is some CPU budget to achieve this.
